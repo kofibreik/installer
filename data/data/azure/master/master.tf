@@ -133,7 +133,7 @@ resource "azurerm_managed_disk" "master" {
   disk_size_gb         = 1024 # p30 disk 200 MB/sec ; 5,000 IOPS
   // disk_size_gb         = 512 # p20 disk 150 MB/sec ; 2,300 IOPS
   // disk_size_gb         = 256 # p15 disk 125 MB/sec ; 1,100 IOPS
-  zones = [var.availability_zones[count.index]]
+  // zones = [var.availability_zones[count.index]]
 }
 
 resource "azurerm_virtual_machine_data_disk_attachment" "master" {
